@@ -26,7 +26,7 @@ public class ModJeu extends JFrame{
 	    
 	    PanMJ.add(Challenger);
 	    PanMJ.add(Defenseur);
-	//    PanMJ.add(Duel); 
+	    PanMJ.add(Duel); 
 	    
 	    ModJeu.add(PanMJ);
 	    

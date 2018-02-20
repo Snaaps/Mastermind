@@ -1,4 +1,4 @@
-package Default;
+package Challenger;
 
 import java.awt.Color;
 import java.awt.Dimension;
