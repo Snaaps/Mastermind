@@ -13,6 +13,7 @@ import Challenger.Reponse.Reponse2;
 import Challenger.Reponse.Reponse3;
 import Challenger.Reponse.Reponse4;
 public class Comparateur {
+	
 	static int Correct = 0 ;
 	 int B1 = Container1.B1 ;
 	 int B2 = Container2.B2 ;
