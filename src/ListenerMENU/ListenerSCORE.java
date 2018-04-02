@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import Default.Fenetre;
 
 public class ListenerSCORE extends JPanel implements ActionListener {
 	JButton SCORE = new JButton("SCORE");

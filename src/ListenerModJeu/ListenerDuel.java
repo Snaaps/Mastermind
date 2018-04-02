@@ -10,9 +10,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import Duel.FenetreDuel;
+import Reponse.Reponses;
 
 public class ListenerDuel extends JPanel implements ActionListener{
 	public static JButton BDuel = new JButton("Duel");
+	public static int ModDUEL = 0;
 		
 	
 	public ListenerDuel() {
@@ -27,6 +29,8 @@ public class ListenerDuel extends JPanel implements ActionListener{
 	
 	
 	public void actionPerformed(ActionEvent e) {
+		ModDUEL = 1;
+		new Reponses();
 	   new FenetreDuel() ;
 		
 	}

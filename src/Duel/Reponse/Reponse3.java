@@ -9,15 +9,12 @@ import javax.swing.JPanel;
 
 public class Reponse3 extends JPanel{
 	
-	static Random r = new Random();
-	public static int Rep3 = r.nextInt(5) + 1;
 	public static int cache = 0;
 	public static JButton bouton = new JButton();
-	private Color listclr[]= {Color.WHITE,Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
+	private Color listclr[]=  {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
 	
 	public Reponse3(){
 		 
-		System.out.println("R3 ="+Rep3);
 		 
 		    this.add(bouton);
 		    bouton.setBackground(listclr[cache]);

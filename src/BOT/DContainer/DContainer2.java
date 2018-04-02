@@ -6,36 +6,34 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
 import BOT.IA;
-public class DContainer2 extends JPanel implements ActionListener {
-	public static int B2 = IA.valC2 ;
+public class DContainer2 extends JPanel {
+	
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
-	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
+	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
   public DContainer2(){
 	 
     this.setName(nom);
     
  
     this.add(bouton);
-    bouton.addActionListener(this);
     bouton.setBackground(Color.WHITE);
     bouton.setPreferredSize(new Dimension(300, 300));
- 
+    IACouleur();
     this.setVisible(true);
    
   }      
   
   
-  @Override
-	 public void actionPerformed(ActionEvent arg0) {
-		 bouton.setBackground(TableauCouleur1[B2]); 
-		B2 = B2 +1 ;
-	    System.out.println("B2="+B2);
+  public void IACouleur() {
+	  
+		 bouton.setBackground(TableauCouleur1[IA.valC2]); 
+		 
+	    System.out.println("B2="+IA.valC2);
 	   
-	    	if ( B2 >= 5 ){
-	    		 B2 = 0 ;
-	    	}
+	    	
+	    	 
 }
+
 }

@@ -12,8 +12,8 @@ public class DReponse4 extends JPanel implements ActionListener {
 		public static int DR4 = 0 ;
 		private String nom = this.getName();
 		private JButton bouton = new JButton() ;
-		Color TableauCouleur1[]= {Color.WHITE,Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
-		public static int d ;
+		Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
+		
 	  public DReponse4(){
 		 
 	    this.setName(nom);
@@ -31,14 +31,15 @@ public class DReponse4 extends JPanel implements ActionListener {
 	  
 	  @Override
 		 public void actionPerformed(ActionEvent arg0) {
+		  DR4 = DR4 +1 ;
 			 bouton.setBackground(TableauCouleur1[DR4]); 
-			DR4 = DR4 +1 ;
+			
 		    System.out.println("DR4="+DR4);
 		   
 		    	if ( DR4 >= 5 ){
 		    		 DR4 = 0 ;
 		    	}
-		    	 d = DR4 ;
+		    	Valider.Rep4 = DR4;
 	}
 	}
 

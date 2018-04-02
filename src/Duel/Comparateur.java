@@ -1,28 +1,25 @@
-package Challenger;
+package Duel;
 import java.awt.Color;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-
-import Challenger.Container.*;
-import Challenger.Reponse.*;
+import Reponse.Reponses;
+import Duel.PanelJoueur1;
+import Duel.Container.*;
+import Duel.Reponse.*;
 public class Comparateur {
 	
 	static int Correct = 0 ;
-	 int B1 = Container1.B1 ;
-	 int B2 = Container2.B2 ;
-	 int B3 = Container3.B3 ;
-	 int B4 = Container4.B4 ;
+	 public static int B1 = Container1.B1;
+	 public static int B2 = Container2.B2 ;
+	 public static int B3 = Container3.B3 ;
+	 public static int B4 = Container4.B4 ;
 	 JOptionPane jop1 = new JOptionPane();
-	 JButton buRep1 = Reponse1.bouton;
-	 JButton buRep2 = Reponse2.bouton;
-	 JButton buRep3 = Reponse3.bouton;
-	 JButton buRep4 = Reponse4.bouton;
-	 
-	 int Rep1 = Reponse1.Rep1 ;
-	 int Rep2 = Reponse2.Rep2 ;
-	 int Rep3 = Reponse3.Rep3 ;
-	 int Rep4 = Reponse4.Rep4 ;
+
+	 int Rep1 = Reponses.Rep1 ;
+	 int Rep2 = Reponses.Rep2 ;
+	 int Rep3 = Reponses.Rep3 ;
+	 int Rep4 = Reponses.Rep4 ;
 	 
 	 public Comparateur() {
 		 if (B1 == 0){
@@ -38,6 +35,7 @@ public class Comparateur {
 			 B4 = 5;
 		 }
 		 System.out.println("-------------------------------------------------------");
+		 System.out.println("Reponse = "+Reponses.Rep1+Reponses.Rep2+Reponses.Rep3+Reponses.Rep4);
 		 Comp1();
 		 Comp2();
 		 Comp3();
@@ -57,11 +55,11 @@ public class Comparateur {
 		if (B1 == Rep1) {
 			System.out.println("B1 est correct");
 			
-			buRep1.setBackground(Color.GREEN);
+			Reponse1.bouton.setBackground(Color.GREEN);
 		 }
 		 else if(B1 == Rep2 || B1==Rep3 || B1 == Rep4) {
 			 System.out.println("La couleur de B1 est mal placé");
-			 buRep1.setBackground(Color.ORANGE);
+			 Reponse1.bouton.setBackground(Color.ORANGE);
 		 }
 		/* else if (B1==Rep3) {
 			 System.out.println("La couleur de B1 est mal placé");
@@ -75,7 +73,7 @@ public class Comparateur {
 		
 		 else {
 			 System.out.println("La couleur de B1 n'est pas en en jeu");
-			 buRep1.setBackground(Color.RED);
+			 Reponse1.bouton.setBackground(Color.RED);
 		 }
 		
 	}
@@ -84,11 +82,11 @@ public class Comparateur {
 		System.out.println("B2="+B2);
 		if (B2 == Rep2) {
 			System.out.println("B2 est correct");
-			buRep2.setBackground(Color.GREEN);
+			Reponse2.bouton.setBackground(Color.GREEN);
 		 }
 		 else if(B2 == Rep1 || B2==Rep3 || B2==Rep4) {
 			 System.out.println("La couleur de B2 est mal placé");
-			 buRep2.setBackground(Color.ORANGE);
+			 Reponse2.bouton.setBackground(Color.ORANGE);
 		 }
 	/*	 else if (B2==Rep3) {
 			 System.out.println("La couleur de B2 est mal placé");
@@ -100,18 +98,18 @@ public class Comparateur {
 		 } */
 		 else {
 			 System.out.println("La couleur de B2 n'est pas en en jeu");
-			 buRep2.setBackground(Color.RED);
+			 Reponse2.bouton.setBackground(Color.RED);
 		 }
 	}
 	private void Comp3() {
 		System.out.println("B3="+B3);
 		if (B3 == Rep3) {
 			System.out.println("B3 est correct");
-			buRep3.setBackground(Color.GREEN);
+			Reponse3.bouton.setBackground(Color.GREEN);
 		 }
 		 else if(B3 == Rep1 || B3==Rep2 || B3==Rep4) {
 			 System.out.println("La couleur de B3 est mal placé");
-			 buRep3.setBackground(Color.ORANGE);
+			 Reponse3.bouton.setBackground(Color.ORANGE);
 		 }
 		/* else if (B3==Rep2) {
 			 System.out.println("La couleur de B3 est mal placé");
@@ -123,18 +121,18 @@ public class Comparateur {
 		 } */
 		 else {
 			 System.out.println("La couleur de B3 n'est pas en en jeu");
-			 buRep3.setBackground(Color.RED);
+			 Reponse3.bouton.setBackground(Color.RED);
 		 }
 	}
 	private void Comp4() {
 		System.out.println("B4="+B4);
 		if (B4 == Rep4) {
 			System.out.println("B4 est correct");
-			buRep4.setBackground(Color.GREEN);
+			Reponse4.bouton.setBackground(Color.GREEN);
 		 }
 		 else if(B4 == Rep1 || B4==Rep2 || B4==Rep3) {
 			 System.out.println("La couleur de B4 est mal placé");
-			 buRep4.setBackground(Color.ORANGE);
+			 Reponse4.bouton.setBackground(Color.ORANGE);
 		 }
 		/* else if (B4==Rep2) {
 			 System.out.println("La couleur de B4 est mal placé");
@@ -146,7 +144,7 @@ public class Comparateur {
 		 } */
 		 else {
 			 System.out.println("La couleur de B4 n'est pas en en jeu");
-			 buRep4.setBackground(Color.RED);
+			 Reponse4.bouton.setBackground(Color.RED);
 		 }
 	}
 	private void Correct() {

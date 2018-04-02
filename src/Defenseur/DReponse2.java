@@ -1,6 +1,7 @@
 package Defenseur;
 
 import java.awt.Color;
+import Defenseur.Valider;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +13,7 @@ public class DReponse2 extends JPanel implements ActionListener {
 		public static int DR2 = 0 ;
 		private String nom = this.getName();
 		private JButton bouton = new JButton() ;
-		Color TableauCouleur1[]= {Color.WHITE,Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
+		Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
 		public static int b ;
 	  public DReponse2(){
 		 
@@ -40,7 +41,7 @@ public class DReponse2 extends JPanel implements ActionListener {
 		    		 DR2 = 0 ;
 		    	}
 		    	
-		     b = DR2 ;
+		    	 Valider.Rep2 = DR2;
 	}
 	}
 

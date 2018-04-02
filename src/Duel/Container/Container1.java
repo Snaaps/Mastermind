@@ -1,4 +1,4 @@
-package BOT.DContainer;
+package Duel.Container;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -6,34 +6,37 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import BOT.IA;
-public class DContainer3 extends JPanel {
-	
+ import Duel.Comparateur ;
+public class Container1 extends JPanel implements ActionListener {
+	public static int B1 = 0 ;
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
 	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
-  public DContainer3(){
+  public Container1(){
 	 
     this.setName(nom);
     
  
     this.add(bouton);
+    bouton.addActionListener(this);
     bouton.setBackground(Color.WHITE);
     bouton.setPreferredSize(new Dimension(300, 300));
-    IACouleur();
+ 
     this.setVisible(true);
    
   }      
   
   
-  public void IACouleur() {
-	  
-		 bouton.setBackground(TableauCouleur1[IA.valC3]); 
-		 
-	    System.out.println("B3="+IA.valC3);
+  @Override
+	 public void actionPerformed(ActionEvent arg0) {
+	
+		 bouton.setBackground(TableauCouleur1[B1]); 
+		  B1 = B1 +1;
+	    System.out.println("B1="+B1);
 	   
-	    	
-	    	 
+	    	if ( B1 == 5 ){
+	    	 B1 = 0 ;
+	    	}
+	    	Comparateur.B1 = B1 ;
 }
-
 }

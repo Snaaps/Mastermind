@@ -13,7 +13,7 @@ public class DPanelReponse extends JPanel{
 	private DReponse4 Rep4 = new DReponse4();
 	
 	 public DPanelReponse(){
-		 this.setLayout(new GridLayout(1, 4, 5, 5));
+		 this.setLayout(new GridLayout(1, 1, 3, 0));
 		this.add(Rep1);
 		this.add(Rep2);
 		this.add(Rep3);

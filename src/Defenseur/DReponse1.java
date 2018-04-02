@@ -4,18 +4,18 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import Defenseur.Valider;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 public class DReponse1 extends JPanel implements ActionListener {
 	
-		public static int DR1 = 0 ;
+		public static int DR1 ;
 		private String nom = this.getName();
 		private JButton bouton = new JButton() ;
-		Color TableauCouleur1[]= {Color.WHITE,Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
+		Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
 		public static int a ;
 	  public DReponse1(){
-		 
+		 DR1 = 0 ;
 	    this.setName(nom);
 	    
 	 
@@ -39,7 +39,7 @@ public class DReponse1 extends JPanel implements ActionListener {
 		    	if ( DR1 >= 5 ){
 		    		 DR1 = 0 ;
 		    	}
-		    	a = DR1 ;
+		   Valider.Rep1 = DR1 ;
 	}
 	}
 

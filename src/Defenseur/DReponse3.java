@@ -12,7 +12,7 @@ public class DReponse3 extends JPanel implements ActionListener {
 		public static int DR3 = 0 ;
 		private String nom = this.getName();
 		private JButton bouton = new JButton() ;
-		Color TableauCouleur1[]= {Color.WHITE,Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
+		Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
 		public static int c ;
 	  public DReponse3(){
 		 
@@ -39,7 +39,7 @@ public class DReponse3 extends JPanel implements ActionListener {
 		    	if ( DR3 >= 5 ){
 		    		 DR3 = 0 ;
 		    	}
-		    	 c = DR3 ;
+		    	Valider.Rep3 = DR3;
 		    	
 	}
 	}
