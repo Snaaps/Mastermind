@@ -11,7 +11,7 @@ public class DContainer2 extends JPanel {
 	
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
-	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
+	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
   public DContainer2(){
 	 
     this.setName(nom);

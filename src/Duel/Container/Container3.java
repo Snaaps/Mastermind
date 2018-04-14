@@ -31,9 +31,9 @@ public class Container3 extends JPanel implements ActionListener {
   
   @Override
 	 public void actionPerformed(ActionEvent arg0) {
-		 bouton.setBackground(TableauCouleur1[B3]); 
+		 
 		B3 = B3 +1 ;
-	   
+		bouton.setBackground(TableauCouleur1[B3]); 
 	   
 	    if ( B3 > 4 ){
 	    		 B3 = 0 ;

@@ -15,7 +15,7 @@ public class DContainer4 extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
-	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
+	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
   public DContainer4(){
 	 
     this.setName(nom);
