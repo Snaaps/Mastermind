@@ -3,6 +3,7 @@ import ListenerModJeu.* ;
 
 import java.util.Random;
 import BOT.Comparateur;
+import BOT.ProchainTour;
 import Defenseur.Valider;
 public class Reponses {
 	static Random r = new Random();
@@ -13,7 +14,8 @@ public class Reponses {
 	   public static int Rep1 ;
 	   public static int Rep3 ;
 	   public static int Rep4 ;
-   
+	   
+	   public static int pp;
    
 	public Reponses(){
 		if (ListenerDefenseur.ModDEF == 1) {
@@ -26,6 +28,7 @@ public class Reponses {
 			Rep4 = Valider.Rep4;
 			Comparateur.Rep4 = Rep4 ;
 			System.out.println("Reponses = "+Rep1+Rep2+Rep3+Rep4);
+			pp = BOT.ProchainTour.p ;
 		}
 		else if (ListenerDuel.ModDUEL == 1) {
 			 Rep1 = r.nextInt(5);
@@ -37,6 +40,7 @@ public class Reponses {
 			 Rep4 = u.nextInt(5);
 			 Comparateur.Rep4 = Rep4 ;
 			 System.out.println("Reponses = "+Rep1+Rep2+Rep3+Rep4);
+			 pp = Duel.ProchainTour.p;
 		}
 		else {
 			

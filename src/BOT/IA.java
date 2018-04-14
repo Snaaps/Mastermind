@@ -8,7 +8,7 @@ import BOT.DContainer.DContainer3;
 import BOT.DContainer.DContainer4;
 import BOT.ProchainTour;
 public class IA {
-	int p = ProchainTour.p ;    //Valeur qui compte combien de tour 
+	public static int p = ProchainTour.p ;    //Valeur qui compte combien de tour 
 	public static DContainer1 IABu1 = new DContainer1(); // Bouton de l'IA 1
 	public static DContainer2 IABu2 = new DContainer2(); // Bouton de l'IA 2
 	public static DContainer3 IABu3 = new DContainer3(); // Bouton de l'IA 3
@@ -53,13 +53,13 @@ public class IA {
 			if ( C4C == 1) {
 				valC4 = BR4 ;
 			}
-			if ( valC1 >= 5 ){
+			if ( valC1 > 4 ){
 		    	 valC1 = 0 ;
 		    	}
-			if ( valC2 >= 5 ){
+			if ( valC2 > 4 ){
 		    	 valC2 = 0 ;
 		    	}
-			if ( valC3 >= 5 ){
+			if ( valC3 > 4 ){//if ( valC3 >= 5 ){
 		    	 valC3 = 0 ;
 		    	}
 			if ( valC4 >= 5 ){

@@ -11,7 +11,11 @@ import BOT.Comparateur;
 import BOT.IA;
 import BOT.DContainer.*;
 import Defenseur.DPanelReponse;
-import Reponse.Reponses; ;
+import Reponse.Reponses; 
+import Duel.Container.Container1;
+import Duel.Container.Container2;
+import Duel.Container.Container3;
+import Duel.Container.Container4;
 
 public class ProchainTour extends JPanel implements ActionListener {
 	/**
@@ -37,12 +41,17 @@ public class ProchainTour extends JPanel implements ActionListener {
 	
  	public void actionPerformed(ActionEvent arg0) {
  		p++ ;
- 		
+ 		Comparateur.pp = p ;
+ 		IA.p = p ;
  		
  		new Duel.Comparateur();
+ 		new IA();
+ 		
  		new Comparateur();
- 		new BOT.ProchainTour();
+ 		BOT.ProchainTour.Clic();
  		new PanelJoueur1();
+ 		//new PanelIA();
+ 		
    
  	}
 }

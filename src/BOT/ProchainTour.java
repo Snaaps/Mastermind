@@ -37,12 +37,17 @@ public class ProchainTour extends JPanel implements ActionListener {
 	}
 	
  	public void actionPerformed(ActionEvent arg0) {
+ 		Clic();
+   
+ 	}
+ 	public static void Clic() {
  		p++ ;
+ 		Comparateur.pp = p ;
+ 		IA.p = p ;
  		new IA() ;	
  		IA.IABu1.IACouleur(); 
 		IA.IABu2.IACouleur(); 
 		IA.IABu3.IACouleur(); 
 		IA.IABu4.IACouleur();
-   
  	}
 }

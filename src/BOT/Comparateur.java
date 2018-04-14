@@ -12,7 +12,7 @@ import Reponse.Reponses;
 import BOT.ProchainTour;
 public class Comparateur {
 	static int Correct = 0 ;
-		int p = ProchainTour.p ;
+		public static int pp = Reponses.pp ;
 	 int B1 = IA.valC1 ;
 	 int B2 = IA.valC2 ;
 	 int B3 = IA.valC3 ;
@@ -24,10 +24,10 @@ public class Comparateur {
 	 public static int RBot3 = 0 ;
 	 public static int RBot4 = 0 ;
 	 
-	 public static int Rep1  ;
-	 public static int Rep2 ;
-	 public static int Rep3  ;
-	 public static int Rep4  ;
+	 public static int Rep1 ; //= Reponse.Reponses.Rep1  ;
+	 public static int Rep2; // = Reponse.Reponses.Rep2  ;
+	 public static int Rep3; // = Reponse.Reponses.Rep3   ;
+	 public static int Rep4; // = Reponse.Reponses.Rep4  ;
 	 
 	 public Comparateur() {
 		/* if (B1 == 0){
@@ -51,7 +51,7 @@ public class Comparateur {
 		 Correct();
 		 if(Correct == 1) {
 				
-			  JOptionPane.showMessageDialog(null, "LE BOT GAGNE EN "+p+" TOURS", "Information", JOptionPane.INFORMATION_MESSAGE);
+			  JOptionPane.showMessageDialog(null, "LE BOT GAGNE EN "+pp+" TOURS", "Information", JOptionPane.INFORMATION_MESSAGE);
 			  
 		  }
 		 

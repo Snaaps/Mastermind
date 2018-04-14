@@ -29,7 +29,7 @@ public class DReponse1 extends JPanel implements ActionListener {
 	  }      
 	  
 	  
-	  @Override
+	  
 		 public void actionPerformed(ActionEvent arg0) {
 		  DR1 = DR1 +1 ;
 			 bouton.setBackground(TableauCouleur1[DR1]); 
