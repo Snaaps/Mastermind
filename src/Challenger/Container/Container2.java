@@ -6,12 +6,13 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
- 
+import ListenerMENU.DomParser ;
 public class Container2 extends JPanel implements ActionListener {
 	public static int B2 = 0 ;
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
-	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
+	int NbCouleur = DomParser.NbCouleur -1 ;
+	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.YELLOW,Color.BLACK,Color.ORANGE,Color.PINK,Color.LIGHT_GRAY};
   public Container2(){
 	 
     this.setName(nom);
@@ -33,7 +34,7 @@ public class Container2 extends JPanel implements ActionListener {
 		B2 = B2 +1 ;
 	    System.out.println("B2="+B2);
 	   
-	    	if ( B2 >= 5 ){
+	    	if ( B2 > NbCouleur ){
 	    		 B2 = 0 ;
 	    	}
 }

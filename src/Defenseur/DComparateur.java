@@ -12,6 +12,7 @@ import Challenger.Reponse.Reponse1;
 import Challenger.Reponse.Reponse2;
 import Challenger.Reponse.Reponse3;
 import Challenger.Reponse.Reponse4;
+import Reload.Reload;
 public class DComparateur {
 	static int Correct = 0 ;
 	 int B1 = Container1.B1 ;
@@ -51,7 +52,7 @@ public class DComparateur {
 		 if(Correct == 1) {
 				
 			 jop1.showMessageDialog(null, "L'IA A GAGNEE", "Information", JOptionPane.INFORMATION_MESSAGE);
-			//  new Reload() ;
+			  new Reload() ;
 		  }
 		 
 	 }

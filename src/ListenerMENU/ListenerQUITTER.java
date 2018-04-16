@@ -24,7 +24,6 @@ public class ListenerQUITTER extends JPanel implements ActionListener {
 	}
 	
  	public void actionPerformed(ActionEvent arg0) {
- 	//	Menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
-   
+ 		System.exit(1);
  	}
 }

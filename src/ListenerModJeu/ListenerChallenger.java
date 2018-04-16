@@ -15,6 +15,7 @@ import ListenerModJeu.ModJeu;
 public class ListenerChallenger extends JPanel implements ActionListener {
 	
 	JButton BChallenger = new JButton("Challenger");
+	public static int ModCH = 0;
 		
 	
 	public  ListenerChallenger() {
@@ -28,6 +29,7 @@ public class ListenerChallenger extends JPanel implements ActionListener {
 	}
 	
  	public void actionPerformed(ActionEvent arg0) {
+ 		ModCH = 1 ;
  		new Fenetre() ;
    
  	}

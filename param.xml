@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<All>
+		<VoirLesReponses VoirRep="oui">
+		<!--0 pour Non , 1 pour Oui--></VoirLesReponses>
+
+		<NombreDeTours NbTours="5">
+		<!-- NbTours [1;+inf]--></NombreDeTours>
+
+	<Challenger>
+			<NombreDeBoutons NbBoutons="4">
+			<!--NbBoutons [4;6]--></NombreDeBoutons>			
+			<NombreDeCouleurs NbCouleurs="5">
+			<!--NbCouleurs [4;10]--></NombreDeCouleurs>
+	</Challenger>
+
+		
+</All>

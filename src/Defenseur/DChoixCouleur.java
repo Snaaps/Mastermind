@@ -10,8 +10,19 @@ import javax.swing.JPanel;
 import Defenseur.DPanelJoueur;
 import Defenseur.DPanelReponse;
 import Defenseur.Valider;
+import ListenerModJeu.ModJeu;
+import Defenseur.DReponse1;
+import Defenseur.DReponse2;
+import Defenseur.DReponse3;
+import Defenseur.DReponse4;
 
 public class DChoixCouleur extends JFrame {
+	public static JFrame ModJeu = 
+			 ListenerModJeu.ModJeu.ModJeu;
+	public static int B1 = DReponse1.DR1 ;
+	public static int B2 = DReponse2.DR2 ;
+	public static int B3 = DReponse3.DR3 ;
+	public static int B4 = DReponse4.DR4 ;
 	
 	public static JFrame fen;
 
@@ -26,11 +37,11 @@ public class DChoixCouleur extends JFrame {
 			
 				
 				 fen = new JFrame() ;
-			    this.setTitle("MASTERMIND") ;
-			    this.setSize(1320,725);
-			    this.setLocationRelativeTo(null);
+			    fen.setTitle("MASTERMIND") ;
+			    fen.setSize(1320,725);
+			   fen.setLocationRelativeTo(null);
 			   // this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			    this.getContentPane().add(DPJ, BorderLayout.NORTH);
+			    fen.getContentPane().add(DPJ, BorderLayout.NORTH);
 			   // this.setLayout(new GridLayout(4, 4 ,4 ,0));
 			   
 			    val.setLocation(125,400);
@@ -40,9 +51,9 @@ public class DChoixCouleur extends JFrame {
 			       pan.add(val);
 			   
 			
-			    this.add(pan);
-			    
-			    this.setVisible(true); 
+			    fen.add(pan);
+			    ModJeu.setVisible(false);
+			    fen.setVisible(true); 
 			    }
 		
 

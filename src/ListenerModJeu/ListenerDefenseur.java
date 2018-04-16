@@ -13,7 +13,7 @@ import Defenseur.DChoixCouleur;
 
 public class ListenerDefenseur extends JPanel implements ActionListener{
 	public static JButton BDefenseur = new JButton("Defenseur");
-		
+		public static int ModDEF = 0;
 	
 	public ListenerDefenseur() {
 		this.add(BDefenseur);
@@ -27,6 +27,7 @@ public class ListenerDefenseur extends JPanel implements ActionListener{
 	
 	
 	public void actionPerformed(ActionEvent e) {
+		ModDEF = 1;
 	  new DChoixCouleur() ;
 		
 	}

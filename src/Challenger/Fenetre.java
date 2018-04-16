@@ -7,22 +7,24 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import ListenerMENU.Main;
+import ListenerMENU.Main ;
 
-public class Fenetre extends JFrame  {
+public class Fenetre   {
+	public static JFrame fenChal = new JFrame() ;
 	private JPanel pan2 = new JPanel() ;
 	private JPanel pan1 = new JPanel();
-	
 	private Valider val=new Valider();
 	private PanelJoueur PJ = new PanelJoueur() ;
 	private PanelReponse PR= new PanelReponse() ;
 	public Fenetre()  {
 		
 		JFrame fen = new JFrame() ;
-	    this.setTitle("MASTERMIND") ;
-	    this.setSize(1320,725);
-	    this.setLocationRelativeTo(null);
+	    fenChal.setTitle("MASTERMIND") ;
+	    fenChal.setSize(1320,725);
+	    fenChal.setLocationRelativeTo(null);
 	 //   this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    this.getContentPane().add(PJ, BorderLayout.NORTH);
+	    fenChal.getContentPane().add(PJ, BorderLayout.NORTH);
 	   // this.setLayout(new GridLayout(4, 4 ,4 ,0));
 	   
 	    val.setLocation(125,400);
@@ -32,9 +34,10 @@ public class Fenetre extends JFrame  {
 	       pan1.add(val);
 	   
 	
-	    this.add(pan1);
-	    
-	    this.setVisible(true); 
+	    fenChal.add(pan1);
+
+	    ListenerModJeu.ModJeu.ModJeu.setVisible(false);
+	    fenChal.setVisible(true); 
 	    }
 	 
 	

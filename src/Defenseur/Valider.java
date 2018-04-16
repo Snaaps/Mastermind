@@ -8,13 +8,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
+import Reponse.Reponses ;
 public class Valider extends JPanel implements ActionListener {
-	int DR1 = DReponse1.a;
-	int DR2 = DReponse2.b ;
-	int DR3 = DReponse3.c ;
-	int DR4 = DReponse4.d ;
-	private String nom = this.getName();
+	public static int Rep1 ;
+	public static int Rep2 ;
+	public static int Rep3 ;
+	public static int Rep4 ;
+	 private String nom = this.getName();
 	private JButton bouton = new JButton("VALIDER") ;
 	
 	
@@ -34,8 +34,9 @@ public class Valider extends JPanel implements ActionListener {
   
   @Override
 	 public void actionPerformed(ActionEvent arg0) {
-	 
-	  System.out.println("DR ="+DR1+","+DR2+","+DR3+","+DR4);
+	   new Reponses() ;
+	  	new FenetreJeu() ;
+	  System.out.println("Rep ="+Rep1+","+Rep2+","+Rep3+","+Rep4);
 	  DChoixCouleur.fen.dispose() ;
 	//  new FenetreJeu() ;
 		

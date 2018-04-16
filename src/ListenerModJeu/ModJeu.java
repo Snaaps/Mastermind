@@ -6,9 +6,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import ListenerMENU.Main;
+ 
 
 
 public class ModJeu extends JFrame{
+	public static JFrame Menu = Main.Menu ;
 	private JPanel PanMJ = new JPanel() ;
 	static ListenerChallenger Challenger = new ListenerChallenger();
 	static ListenerDefenseur Defenseur = new ListenerDefenseur();
@@ -30,6 +33,7 @@ public class ModJeu extends JFrame{
 	    
 	    ModJeu.add(PanMJ);
 	    
+	    Menu.setVisible(false);
 	    ModJeu.setVisible(true);
 	}
 

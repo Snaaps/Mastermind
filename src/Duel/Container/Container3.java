@@ -1,4 +1,4 @@
-package Challenger.Container;
+package Duel.Container;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -6,14 +6,16 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import ListenerMENU.DomParser ;
-public class Container4 extends JPanel implements ActionListener {
-	public static int B4 = 0 ;
+
+import Duel.Comparateur;
+import ListenerMENU.DomParser;
+ 
+public class Container3 extends JPanel implements ActionListener {
+	public static int B3 = 0 ;
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
-	int NbCouleur = DomParser.NbCouleur -1 ;
-	Color TableauCouleur1[]=  {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.YELLOW,Color.BLACK,Color.ORANGE,Color.PINK,Color.LIGHT_GRAY};
-  public Container4(){
+	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.YELLOW,Color.BLACK,Color.ORANGE,Color.PINK,Color.LIGHT_GRAY};
+  public Container3(){
 	 
     this.setName(nom);
     
@@ -30,12 +32,15 @@ public class Container4 extends JPanel implements ActionListener {
   
   @Override
 	 public void actionPerformed(ActionEvent arg0) {
-		 bouton.setBackground(TableauCouleur1[B4]); 
-		B4 = B4 +1 ;
-	    System.out.println("B4="+B4);
+		 
+		B3 = B3 +1 ;
+
 	   
-	    	if ( B4 > NbCouleur ){
-	    		 B4 = 0 ;
+	    if ( B3 > DomParser.NbCouleur ){
+	    		 B3 = 0 ;
 	    	}
+		bouton.setBackground(TableauCouleur1[B3]); 
+	    System.out.println("B3="+B3);
+	    	Comparateur.B3 = B3 ;
 }
 }

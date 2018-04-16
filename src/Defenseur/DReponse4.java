@@ -7,13 +7,16 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+
+import ListenerMENU.DomParser;
 public class DReponse4 extends JPanel implements ActionListener {
 	
 		public static int DR4 = 0 ;
 		private String nom = this.getName();
 		private JButton bouton = new JButton() ;
-		Color TableauCouleur1[]= {Color.WHITE,Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
-		public static int d ;
+		int NbCouleur = DomParser.NbCouleur -1 ;
+		Color TableauCouleur1[]={Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.YELLOW,Color.BLACK,Color.ORANGE,Color.PINK,Color.LIGHT_GRAY};
+		
 	  public DReponse4(){
 		 
 	    this.setName(nom);
@@ -31,14 +34,16 @@ public class DReponse4 extends JPanel implements ActionListener {
 	  
 	  @Override
 		 public void actionPerformed(ActionEvent arg0) {
-			 bouton.setBackground(TableauCouleur1[DR4]); 
-			DR4 = DR4 +1 ;
-		    System.out.println("DR4="+DR4);
+		  DR4 = DR4 +1 ;
+			 
 		   
-		    	if ( DR4 >= 5 ){
+		    	if ( DR4 > NbCouleur ){
 		    		 DR4 = 0 ;
 		    	}
-		    	 d = DR4 ;
+		    	bouton.setBackground(TableauCouleur1[DR4]); 
+				
+			    System.out.println("DR4="+DR4);
+		    	Valider.Rep4 = DR4;
 	}
 	}
 

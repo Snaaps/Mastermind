@@ -9,7 +9,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import Default.Fenetre;
 import ListenerModJeu.ModJeu;
 
 public class ListenerJOUER extends JPanel implements ActionListener {
