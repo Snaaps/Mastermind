@@ -39,7 +39,7 @@ public class Container2 extends JPanel implements ActionListener {
 	    		 B2 = 0 ;
 	    	}
 	    bouton.setBackground(TableauCouleur1[B2]);
-	    System.out.println("B2="+B2);
+	  //  System.out.println("B2="+B2);
 	    	Comparateur.B2 = B2 ;
 }
 }

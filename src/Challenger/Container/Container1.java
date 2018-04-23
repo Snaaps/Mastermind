@@ -19,9 +19,10 @@ public class Container1 extends JPanel implements ActionListener {
     
  
     this.add(bouton);
+    this.setBackground(Color.BLACK);
     bouton.addActionListener(this);
     bouton.setBackground(Color.WHITE);
-    bouton.setPreferredSize(new Dimension(300, 300));
+    bouton.setPreferredSize(new Dimension(250, 250));
  
     this.setVisible(true);
    
@@ -33,7 +34,7 @@ public class Container1 extends JPanel implements ActionListener {
 	 
 		 bouton.setBackground(TableauCouleur1[B1]); 
 		 B1 = B1 +1;
-	    System.out.println("B1="+B1);
+	   // System.out.println("B1="+B1);
 	   
 	    	if ( B1 > NbCouleur )  {
 	    	 B1 = 0 ;

@@ -59,7 +59,7 @@ public class Comparateur {
 				
 			  jop1.showMessageDialog(null, "VOUS AVEZ GAGNE(E)", "Information", JOptionPane.INFORMATION_MESSAGE);
 			  new Reload();
-			  
+			  Correct = 0 ;
 			  
 		  }
 		 

@@ -41,7 +41,7 @@ public class IA {
 	public IA() {
 		
 		
-			
+		//System.out.println("------------------------------------Debut IA()-----------------------------------------");	
 		Tour(); 
 			if ( C1C == 1) { 
 				valC1 = BR1 ;
@@ -69,39 +69,7 @@ public class IA {
 		    	} 
 			
 			new Comparateur();
-		/*	
-			System.out.println("~~~~~");
-			System.out.println("Valeur des boutons :");
-			System.out.println(valC1);
-			System.out.println(valC2);
-			System.out.println(valC3);
-			System.out.println(valC4);
-			System.out.println("~~~~~"); */
-			if (CEJ1.size()>0) {
-			 System.out.println("CEJ1 :");
-			 
-			  System.out.print(CEJ1.get(0));
-			 
-			}
-			if (CEJ2.size()>0) {
-				 System.out.println("CEJ2 :");
-				 
-				  System.out.print(CEJ2.get(0));
-				 }
-				
-			if (CEJ3.size()>0) {
-				 System.out.println("CEJ3 :");
-				
-				  System.out.print(CEJ1.get(0));
-				 
-				}
-			if (CEJ4.size()>0) {
-				 System.out.println("CEJ4 :");
-				
-				  System.out.print(CEJ4.get(0));
-				 
-				}
-			
+		
 			if (C1C==1 & C2C==1 & C3C==1 & C4C==1) {
 				Finish = 1 ;
 			}
@@ -109,12 +77,12 @@ public class IA {
 		if (Finish == 1) {
 			System.out.println("Le bot a trouvé");
 		}
-		System.out.println("-----------------------------------------------------------------------------");
+	//	System.out.println("------------------------------------Fin IA()-----------------------------------------");
 	}
 	
 	
 	void Tour() {
-		System.out.println("~~~~");
+		//System.out.println("~~ Debut IA.Tour()~~");
 		// Si la/les reponses sont Justes
 		if( BOT.Comparateur.RBot1 == 1) {
 			C1C = 1 ;
@@ -417,7 +385,7 @@ public class IA {
 			}
 		if( BOT.Comparateur.RBot4 == 3) {
 			System.out.println("RBot4 =3 La reponse n'est pas en jeu");
-			if (CEJ3.size() > 0) {
+			if (CEJ4.size() > 0) {
 					if(valC4 == (int) CEJ4.get(0)) {
 						valC4 = (int)CEJ1.get(1);
 						CEJ4.remove(0);
@@ -459,6 +427,7 @@ public class IA {
 			valC4++;
 		}
 	}
+	//System.out.println("~~ Fin IA.Tour()~~");
 	}
 }
 	

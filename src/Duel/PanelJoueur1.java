@@ -40,7 +40,7 @@ public class PanelJoueur1 extends JPanel{
 		A3.setPreferredSize(new Dimension(100, 100));
 		A4.setPreferredSize(new Dimension(100, 100));
 		
-		 this.setLayout(new GridLayout(1, 3, 5, 5));
+		 //this.setLayout(new GridLayout(1, 3, 5, 5));
 		 this.setBounds(50, 400, 600, 150);
 		 this.add(panC);
 		 JLabel jlabel = new JLabel("Joueur");

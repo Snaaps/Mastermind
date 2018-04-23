@@ -40,7 +40,10 @@ public class Reponses {
 			 Comparateur.Rep3 = Rep3 ;
 			 Rep4 = u.nextInt(DomParser.NbCouleur);
 			 Comparateur.Rep4 = Rep4 ;
-			 System.out.println("Reponses = "+Rep1+Rep2+Rep3+Rep4);
+			 if (DomParser.VoirRep == 1) {
+				 System.out.println("Reponses = "+Rep1+Rep2+Rep3+Rep4);
+
+				 }
 			 pp = Duel.ProchainTour.p;
 		}
 		else {

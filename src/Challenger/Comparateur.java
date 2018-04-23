@@ -27,6 +27,7 @@ public class Comparateur {
 	 int Rep4 = Reponse4.Rep4 ;
 	 
 	 public Comparateur() {
+		 if ( Valider.Tour < ListenerMENU.DomParser.NbTour) {
 		 if (B1 == 0){
 			 B1 = NbCouleur;
 		 }
@@ -47,10 +48,16 @@ public class Comparateur {
 		 Correct();
 		 if(Correct == 1) {
 				
-			  jop1.showMessageDialog(null, "VOUS AVEZ GAGNE(E)", "Information", JOptionPane.INFORMATION_MESSAGE);
+			  jop1.showMessageDialog(null, "VOUS AVEZ GAGNE(E) EN "+Valider.Tour+" Tour", "Information", JOptionPane.INFORMATION_MESSAGE);
 			  new Reload() ;
+			  Correct = 0 ;
 		  }
 		 
+	 }
+		 else {
+			 jop1.showMessageDialog(null, "VOUS AVEZ PERDU(E)", "Information", JOptionPane.INFORMATION_MESSAGE);
+			  new Reload() ;
+		 }
 	 }
 
 

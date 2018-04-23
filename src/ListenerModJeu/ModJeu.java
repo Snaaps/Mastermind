@@ -23,7 +23,7 @@ public class ModJeu extends JFrame{
 		
 		
 	 	ModJeu.setTitle("MASTERMIND") ;
-	    ModJeu.setSize(1320,725);
+	    ModJeu.setSize(1000,180);
 	    ModJeu.setLocationRelativeTo(null);
 	  //  ModJeu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    

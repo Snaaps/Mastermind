@@ -14,7 +14,7 @@ public class Main extends JFrame{
 		
 		
 	 	Menu.setTitle("MASTERMIND") ;
-	    Menu.setSize(1320,725);
+	    Menu.setSize(650,180);
 	    Menu.setLocationRelativeTo(null);
 	    Menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
@@ -29,7 +29,7 @@ public class Main extends JFrame{
 	 public static void main(String[] args)   {
 	    	new Main();
 	    	new DomParser();
-	    }
+	 }
 
 	
 

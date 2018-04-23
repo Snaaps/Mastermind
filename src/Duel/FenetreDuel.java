@@ -12,7 +12,7 @@ import ListenerMENU.Main;
 
 
 public class FenetreDuel   {
-	public static JFrame Menu =  Main.Menu ;
+
 	PanelJoueur1 panJoueur = new PanelJoueur1() ;
 	PanelIA panIA = new PanelIA() ;
 	PanelReponse PanRep = new PanelReponse() ;
@@ -32,7 +32,7 @@ public class FenetreDuel   {
     fenDuel.setTitle("MASTERMIND") ;
     fenDuel.setSize(1320,725);
     fenDuel.setLocationRelativeTo(null);
-    Menu.setVisible(false);
+    ListenerModJeu.ModJeu.ModJeu.setVisible(false);
     fenDuel.setVisible(true);
     
    // this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

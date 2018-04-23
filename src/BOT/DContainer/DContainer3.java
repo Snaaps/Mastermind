@@ -30,7 +30,7 @@ public class DContainer3 extends JPanel {
 	  
 		 bouton.setBackground(TableauCouleur1[IA.valC3]); 
 		 
-	    System.out.println("B3="+IA.valC3);
+	  //  System.out.println("B3="+IA.valC3);
 	   
 	    	
 	    	 

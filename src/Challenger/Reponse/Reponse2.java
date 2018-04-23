@@ -19,12 +19,13 @@ public class Reponse2 extends JPanel{
 	private Color listclr[]= {Color.WHITE,Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
 	
 	public Reponse2(){
-		 
-		System.out.println("R2 ="+Rep2);
-		 
+		if (DomParser.VoirRep == 1) {
+		    System.out.println("R2 ="+Rep2);
+		 }
 		    this.add(bouton);
+		    this.setBackground(Color.BLACK);
 		    bouton.setBackground(listclr[cache]);
-		    bouton.setPreferredSize(new Dimension(300, 300));
+		    bouton.setPreferredSize(new Dimension(250, 250));
 		    this.setVisible(true);
 		   
 		  }      
