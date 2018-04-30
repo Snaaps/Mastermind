@@ -28,14 +28,14 @@ public class IA {
 	public static int valC2 = 1 ; //Valeur de la  position de la couleur du bouton 2 a éssayer
 	public static int valC3 = 2 ; //Valeur de la  position de la couleur du bouton 3 a éssayer
 	public static int valC4 = 3 ; //Valeur de la  position de la couleur du bouton 4 a éssayer
-	ArrayList<Integer> CEJ1 = new ArrayList<Integer>(); //Liste des valeurs possible pour 1
-	ArrayList<Integer> CEJ2 = new ArrayList<Integer>(); //Liste des valeurs possible pour 2
-	ArrayList<Integer> CEJ3 = new ArrayList<Integer>(); //Liste des valeurs possible pour 3
-	ArrayList<Integer> CEJ4 = new ArrayList<Integer>(); //Liste des valeurs possible pour 4
-	ArrayList<Integer> CEJ1B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 1
-	ArrayList<Integer> CEJ2B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 2
-	ArrayList<Integer> CEJ3B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 3
-	ArrayList<Integer> CEJ4B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 4
+	public static ArrayList<Integer> CEJ1 = new ArrayList<Integer>(); //Liste des valeurs possible pour 1
+	public static ArrayList<Integer> CEJ2 = new ArrayList<Integer>(); //Liste des valeurs possible pour 2
+	public static ArrayList<Integer> CEJ3 = new ArrayList<Integer>(); //Liste des valeurs possible pour 3
+	public static ArrayList<Integer> CEJ4 = new ArrayList<Integer>(); //Liste des valeurs possible pour 4
+	public static ArrayList<Integer> CEJ1B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 1
+	public static ArrayList<Integer> CEJ2B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 2
+	public static ArrayList<Integer> CEJ3B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 3
+	public static ArrayList<Integer> CEJ4B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 4
 	
 	
 	public IA() {
