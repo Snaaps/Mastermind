@@ -6,6 +6,8 @@ import javax.swing.JOptionPane;
 
 import Challenger.Container.*;
 import Challenger.Reponse.*;
+import ListenerMENU.DomParser;
+import Reload.Reload;
 public class Comparateur {
 	
 	static int Correct = 0 ;
@@ -18,24 +20,25 @@ public class Comparateur {
 	 JButton buRep2 = Reponse2.bouton;
 	 JButton buRep3 = Reponse3.bouton;
 	 JButton buRep4 = Reponse4.bouton;
-	 
+	 int NbCouleur = DomParser.NbCouleur  ;
 	 int Rep1 = Reponse1.Rep1 ;
 	 int Rep2 = Reponse2.Rep2 ;
 	 int Rep3 = Reponse3.Rep3 ;
 	 int Rep4 = Reponse4.Rep4 ;
 	 
 	 public Comparateur() {
+		 if ( Valider.Tour < ListenerMENU.DomParser.NbTour) {
 		 if (B1 == 0){
-			 B1 = 5;
+			 B1 = NbCouleur;
 		 }
 		 if (B2 == 0){
-			 B2 = 5;
+			 B2 = NbCouleur;
 		 }
 		 if (B3 == 0){
-			 B3 = 5;
+			 B3 = NbCouleur;
 		 }
 		 if (B4 == 0){
-			 B4 = 5;
+			 B4 = NbCouleur;
 		 }
 		 System.out.println("-------------------------------------------------------");
 		 Comp1();
@@ -45,10 +48,16 @@ public class Comparateur {
 		 Correct();
 		 if(Correct == 1) {
 				
-			  jop1.showMessageDialog(null, "VOUS AVEZ GAGNE(E)", "Information", JOptionPane.INFORMATION_MESSAGE);
-			//  new Reload() ;
+			  jop1.showMessageDialog(null, "VOUS AVEZ GAGNE(E) EN "+Valider.Tour+" Tour", "Information", JOptionPane.INFORMATION_MESSAGE);
+			  new Reload() ;
+			  Correct = 0 ;
 		  }
 		 
+	 }
+		 else {
+			 jop1.showMessageDialog(null, "VOUS AVEZ PERDU(E)", "Information", JOptionPane.INFORMATION_MESSAGE);
+			  new Reload() ;
+		 }
 	 }
 
 

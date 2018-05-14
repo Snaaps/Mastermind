@@ -1,5 +1,6 @@
 package Reponse;
 import ListenerModJeu.* ;
+import ListenerMENU.DomParser ;
 
 import java.util.Random;
 import BOT.Comparateur;
@@ -31,15 +32,18 @@ public class Reponses {
 			pp = BOT.ProchainTour.p ;
 		}
 		else if (ListenerDuel.ModDUEL == 1) {
-			 Rep1 = r.nextInt(5);
+			 Rep1 = r.nextInt(DomParser.NbCouleur);
 			 Comparateur.Rep1 = Rep1 ;
-			 Rep2 = t.nextInt(5);
+			 Rep2 = t.nextInt(DomParser.NbCouleur);
 			 Comparateur.Rep2 = Rep2 ;
-			 Rep3 = y.nextInt(5);
+			 Rep3 = y.nextInt(DomParser.NbCouleur);
 			 Comparateur.Rep3 = Rep3 ;
-			 Rep4 = u.nextInt(5);
+			 Rep4 = u.nextInt(DomParser.NbCouleur);
 			 Comparateur.Rep4 = Rep4 ;
-			 System.out.println("Reponses = "+Rep1+Rep2+Rep3+Rep4);
+			 if (DomParser.VoirRep == 1) {
+				 System.out.println("Reponses = "+Rep1+Rep2+Rep3+Rep4);
+
+				 }
 			 pp = Duel.ProchainTour.p;
 		}
 		else {

@@ -8,13 +8,16 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import Defenseur.Valider;
+import ListenerMENU.Main;
 
 
-public class FenetreDuel extends JFrame  {
+public class FenetreDuel   {
+
 	PanelJoueur1 panJoueur = new PanelJoueur1() ;
 	PanelIA panIA = new PanelIA() ;
 	PanelReponse PanRep = new PanelReponse() ;
 	 ProchainTour Val = new ProchainTour();
+	 public static JFrame fenDuel = new JFrame(); 
 	 
 	 
 	public FenetreDuel() {
@@ -22,14 +25,15 @@ public class FenetreDuel extends JFrame  {
 		panIA.setPreferredSize(new Dimension(100, 100)); 
 		PanRep.setPreferredSize(new Dimension(100, 100)); 
 		Val.setBounds(700, 400, 200, 300);
-	this.add(panJoueur);
-	this.add(panIA);
-	this.add(PanRep);
-	this.add(Val);
-    this.setTitle("MASTERMIND") ;
-    this.setSize(1320,725);
-    this.setLocationRelativeTo(null);
-    this.setVisible(true);
+	fenDuel.add(panJoueur);
+	fenDuel.add(panIA);
+	fenDuel.add(PanRep);
+	fenDuel.add(Val);
+    fenDuel.setTitle("MASTERMIND") ;
+    fenDuel.setSize(1320,725);
+    fenDuel.setLocationRelativeTo(null);
+    ListenerModJeu.ModJeu.ModJeu.setVisible(false);
+    fenDuel.setVisible(true);
     
    // this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

@@ -8,12 +8,13 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import Duel.Comparateur;
+import ListenerMENU.DomParser;
  
 public class Container2 extends JPanel implements ActionListener {
 	public static int B2 = 0 ;
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
-	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.RED};
+	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.YELLOW,Color.BLACK,Color.ORANGE,Color.PINK,Color.LIGHT_GRAY};
   public Container2(){
 	 
     this.setName(nom);
@@ -33,12 +34,12 @@ public class Container2 extends JPanel implements ActionListener {
 	 public void actionPerformed(ActionEvent arg0) {
 		 
 		B2 = B2 +1 ;
-		 bouton.setBackground(TableauCouleur1[B2]);
-	    if ( B2 > 4 ){
+		// bouton.setBackground(TableauCouleur1[B2]);
+	    if ( B2 > DomParser.NbCouleur ){
 	    		 B2 = 0 ;
 	    	}
-
-	    System.out.println("B2="+B2);
+	    bouton.setBackground(TableauCouleur1[B2]);
+	  //  System.out.println("B2="+B2);
 	    	Comparateur.B2 = B2 ;
 }
 }

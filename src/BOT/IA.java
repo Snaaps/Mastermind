@@ -6,6 +6,7 @@ import BOT.DContainer.DContainer1;
 import BOT.DContainer.DContainer2;
 import BOT.DContainer.DContainer3;
 import BOT.DContainer.DContainer4;
+import ListenerMENU.DomParser;
 import BOT.ProchainTour;
 public class IA {
 	public static int p = ProchainTour.p ;    //Valeur qui compte combien de tour 
@@ -14,6 +15,7 @@ public class IA {
 	public static DContainer3 IABu3 = new DContainer3(); // Bouton de l'IA 3
 	public static DContainer4 IABu4 = new DContainer4(); // Bouton de l'IA 4
 	int Finish = 0 ; // Variable qui indique si le bot a Tout trouvé
+	int NbCouleur = DomParser.NbCouleur - 1;
 	int C1C = 0 ;	//Variable qui indique si le bot a trouvé la 1ere Couleur
 	int C2C = 0 ;	//Variable qui indique si le bot a trouvé la 2eme Couleur
 	int C3C = 0 ;	//Variable qui indique si le bot a trouvé la 3eme Couleur
@@ -26,20 +28,20 @@ public class IA {
 	public static int valC2 = 1 ; //Valeur de la  position de la couleur du bouton 2 a éssayer
 	public static int valC3 = 2 ; //Valeur de la  position de la couleur du bouton 3 a éssayer
 	public static int valC4 = 3 ; //Valeur de la  position de la couleur du bouton 4 a éssayer
-	ArrayList<Integer> CEJ1 = new ArrayList<Integer>(); //Liste des valeurs possible pour 1
-	ArrayList<Integer> CEJ2 = new ArrayList<Integer>(); //Liste des valeurs possible pour 2
-	ArrayList<Integer> CEJ3 = new ArrayList<Integer>(); //Liste des valeurs possible pour 3
-	ArrayList<Integer> CEJ4 = new ArrayList<Integer>(); //Liste des valeurs possible pour 4
-	ArrayList<Integer> CEJ1B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 1
-	ArrayList<Integer> CEJ2B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 2
-	ArrayList<Integer> CEJ3B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 3
-	ArrayList<Integer> CEJ4B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 4
+	public static ArrayList<Integer> CEJ1 = new ArrayList<Integer>(); //Liste des valeurs possible pour 1
+	public static ArrayList<Integer> CEJ2 = new ArrayList<Integer>(); //Liste des valeurs possible pour 2
+	public static ArrayList<Integer> CEJ3 = new ArrayList<Integer>(); //Liste des valeurs possible pour 3
+	public static ArrayList<Integer> CEJ4 = new ArrayList<Integer>(); //Liste des valeurs possible pour 4
+	public static ArrayList<Integer> CEJ1B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 1
+	public static ArrayList<Integer> CEJ2B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 2
+	public static ArrayList<Integer> CEJ3B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 3
+	public static ArrayList<Integer> CEJ4B = new ArrayList<Integer>(); //Liste des valeurs a ne plus choisir pour 4
 	
 	
 	public IA() {
 		
 		
-			
+		//System.out.println("------------------------------------Debut IA()-----------------------------------------");	
 		Tour(); 
 			if ( C1C == 1) { 
 				valC1 = BR1 ;
@@ -53,53 +55,21 @@ public class IA {
 			if ( C4C == 1) {
 				valC4 = BR4 ;
 			}
-			if ( valC1 > 4 ){
+			if ( valC1 > NbCouleur ){
 		    	 valC1 = 0 ;
 		    	}
-			if ( valC2 > 4 ){
+			if ( valC2 > NbCouleur ){
 		    	 valC2 = 0 ;
 		    	}
-			if ( valC3 > 4 ){//if ( valC3 >= 5 ){
+			if ( valC3 > NbCouleur ){
 		    	 valC3 = 0 ;
 		    	}
-			if ( valC4 >= 5 ){
+			if ( valC4 > NbCouleur ){
 		    	 valC4 = 0 ;
 		    	} 
 			
 			new Comparateur();
-		/*	
-			System.out.println("~~~~~");
-			System.out.println("Valeur des boutons :");
-			System.out.println(valC1);
-			System.out.println(valC2);
-			System.out.println(valC3);
-			System.out.println(valC4);
-			System.out.println("~~~~~"); */
-			if (CEJ1.size()>0) {
-			 System.out.println("CEJ1 :");
-			 
-			  System.out.print(CEJ1.get(0));
-			 
-			}
-			if (CEJ2.size()>0) {
-				 System.out.println("CEJ2 :");
-				 
-				  System.out.print(CEJ2.get(0));
-				 }
-				
-			if (CEJ3.size()>0) {
-				 System.out.println("CEJ3 :");
-				
-				  System.out.print(CEJ1.get(0));
-				 
-				}
-			if (CEJ4.size()>0) {
-				 System.out.println("CEJ4 :");
-				
-				  System.out.print(CEJ4.get(0));
-				 
-				}
-			
+		
 			if (C1C==1 & C2C==1 & C3C==1 & C4C==1) {
 				Finish = 1 ;
 			}
@@ -107,12 +77,12 @@ public class IA {
 		if (Finish == 1) {
 			System.out.println("Le bot a trouvé");
 		}
-		System.out.println("-----------------------------------------------------------------------------");
+	//	System.out.println("------------------------------------Fin IA()-----------------------------------------");
 	}
 	
 	
 	void Tour() {
-		System.out.println("~~~~");
+		//System.out.println("~~ Debut IA.Tour()~~");
 		// Si la/les reponses sont Justes
 		if( BOT.Comparateur.RBot1 == 1) {
 			C1C = 1 ;
@@ -415,7 +385,7 @@ public class IA {
 			}
 		if( BOT.Comparateur.RBot4 == 3) {
 			System.out.println("RBot4 =3 La reponse n'est pas en jeu");
-			if (CEJ3.size() > 0) {
+			if (CEJ4.size() > 0) {
 					if(valC4 == (int) CEJ4.get(0)) {
 						valC4 = (int)CEJ1.get(1);
 						CEJ4.remove(0);
@@ -457,6 +427,7 @@ public class IA {
 			valC4++;
 		}
 	}
+	//System.out.println("~~ Fin IA.Tour()~~");
 	}
 }
 	

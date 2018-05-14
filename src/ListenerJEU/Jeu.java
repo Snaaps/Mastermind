@@ -1,4 +1,4 @@
-package ListenerModJeu;
+package ListenerJEU;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,28 +10,28 @@ import ListenerMENU.Main;
  
 
 
-public class ModJeu extends JFrame{
+public class Jeu extends JFrame{
 	public static JFrame Menu = Main.Menu ;
-	private JPanel PanMJ = new JPanel() ;
-	static ListenerChallenger Challenger = new ListenerChallenger();
-	static ListenerDefenseur Defenseur = new ListenerDefenseur();
-	static ListenerDuel Duel = new ListenerDuel();
+	private JPanel PanJ = new JPanel() ;
+	static ListenerMastermind Mastermind = new ListenerMastermind();
+	static ListenerPlusMoin PlusMoin = new ListenerPlusMoin();
+	
 	
 	public static JFrame ModJeu = new JFrame() ;
 	
-	public ModJeu() {
+	public Jeu() {
 		
 		
 	 	ModJeu.setTitle("MASTERMIND") ;
 	    ModJeu.setSize(1000,180);
 	    ModJeu.setLocationRelativeTo(null);
-	  //  ModJeu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    ModJeu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
-	    PanMJ.add(Challenger);
-	    PanMJ.add(Defenseur);
-	    PanMJ.add(Duel); 
+	    PanJ.add(Mastermind);
+	    PanJ.add(PlusMoin);
+	     
 	    
-	    ModJeu.add(PanMJ);
+	    ModJeu.add(PanJ);
 	    
 	    Menu.setVisible(false);
 	    ModJeu.setVisible(true);

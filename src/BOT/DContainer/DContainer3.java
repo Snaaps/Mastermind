@@ -11,7 +11,7 @@ public class DContainer3 extends JPanel {
 	
 	private String nom = this.getName();
 	private JButton bouton = new JButton() ;
-	Color TableauCouleur1[]= {Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA};
+	Color TableauCouleur1[]={Color.RED,Color.BLUE,Color.GREEN,Color.CYAN,Color.MAGENTA,Color.YELLOW,Color.BLACK,Color.ORANGE,Color.PINK,Color.LIGHT_GRAY};
   public DContainer3(){
 	 
     this.setName(nom);
@@ -30,7 +30,7 @@ public class DContainer3 extends JPanel {
 	  
 		 bouton.setBackground(TableauCouleur1[IA.valC3]); 
 		 
-	    System.out.println("B3="+IA.valC3);
+	  //  System.out.println("B3="+IA.valC3);
 	   
 	    	
 	    	 

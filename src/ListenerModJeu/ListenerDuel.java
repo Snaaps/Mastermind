@@ -10,12 +10,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import Duel.FenetreDuel;
+import ListenerMENU.Main;
 import Reponse.Reponses;
 
 public class ListenerDuel extends JPanel implements ActionListener{
 	public static JButton BDuel = new JButton("Duel");
 	public static int ModDUEL = 0;
-		
+		public static JFrame Menu = Main.Menu ;
 	
 	public ListenerDuel() {
 		this.add(BDuel);
@@ -31,6 +32,7 @@ public class ListenerDuel extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		ModDUEL = 1;
 		new Reponses();
+		Menu.setVisible(false);
 	   new FenetreDuel() ;
 		
 	}

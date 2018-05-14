@@ -8,6 +8,8 @@ import Duel.Reponse.Reponse1;
 import Duel.Reponse.Reponse2;
 import Duel.Reponse.Reponse3;
 import Duel.Reponse.Reponse4;
+import ListenerModJeu.ListenerDefenseur;
+import Reload.Reload;
 import Reponse.Reponses;
 import Duel.PanelJoueur1;
 import Duel.Container.*;
@@ -56,7 +58,9 @@ public class Comparateur {
 		 if(Correct == 1) {
 				
 			  jop1.showMessageDialog(null, "VOUS AVEZ GAGNE(E)", "Information", JOptionPane.INFORMATION_MESSAGE);
-			//  new Reload() ;
+			  new Reload();
+			  Correct = 0 ;
+			  
 		  }
 		 
 	 }

@@ -8,6 +8,9 @@ import BOT.DContainer.DContainer1;
 import BOT.DContainer.DContainer2;
 import BOT.DContainer.DContainer3;
 import BOT.DContainer.DContainer4;
+import Challenger.Valider;
+import ListenerModJeu.ListenerDefenseur;
+import Reload.Reload;
 import Reponse.Reponses; 
 import BOT.ProchainTour;
 public class Comparateur {
@@ -30,6 +33,7 @@ public class Comparateur {
 	 public static int Rep4; // = Reponse.Reponses.Rep4  ;
 	 
 	 public Comparateur() {
+		 if ( ProchainTour.p < ListenerMENU.DomParser.NbTour) {
 		/* if (B1 == 0){
 			 B1 = 5;
 		 }
@@ -43,7 +47,7 @@ public class Comparateur {
 			 B4 = 5;
 		 } */
 		//d System.out.println("-------------------------------------------------------");
-		 
+		// System.out.println("------------------------------------Debut Comparateur()-----------------------------------------");
 		 Comp1();
 		 Comp2();
 		 Comp3();
@@ -52,10 +56,54 @@ public class Comparateur {
 		 if(Correct == 1) {
 				
 			  JOptionPane.showMessageDialog(null, "LE BOT GAGNE EN "+pp+" TOURS", "Information", JOptionPane.INFORMATION_MESSAGE);
+			  /*
+			   * Bug, quand  le bot trouve, lance 3x JOptionPane et affiche dans la console ceci :
+			   * (A partir du 1er clic du bouton Ok du JOptionPane)
+			   * ------------------------------------Debut IA()-----------------------------------------
+				~~ Debut IA.Tour()~~
+				Le bot a trouvé R1
+				Le bot a trouvé R3
+				Le bot a trouvé R4
+				~~ Fin IA.Tour()~~
+				------------------------------------Debut Comparateur()-----------------------------------------
+				-----------------------------------Fin Comparateur()-----------------------------------------
+				------------------------------------Fin IA()-----------------------------------------
+				------------------------------------Debut Comparateur()-----------------------------------------
+				-----------------------------------Fin Comparateur()-----------------------------------------
+				------------------------------------Debut IA()-----------------------------------------
+				~~ Debut IA.Tour()~~
+				Le bot a trouvé R1
+				Le bot a trouvé R2
+				Le bot a trouvé R3
+				Le bot a trouvé R4
+				~~ Fin IA.Tour()~~
+				------------------------------------Debut Comparateur()-----------------------------------------
+				-----------------------------------Fin Comparateur()-----------------------------------------
+				Le bot a trouvé
+				------------------------------------Fin IA()-----------------------------------------
+				B1=4
+				B2=5
+				B3=4
+				B4=7
+				
+				*/
 			  
+			  if (ListenerDefenseur.ModDEF == 1) {
+				  
+				  
+				  new Reload() ;
+				   
+				  }
+			  Correct = 0 ;
 		  }
-		 
+		// System.out.println("-----------------------------------Fin Comparateur()-----------------------------------------");
+	 } 
+		 else {
+			 jop1.showMessageDialog(null, "LE BOT A PERDU", "Information", JOptionPane.INFORMATION_MESSAGE);
+			  new Reload() ;
+		 }
 	 }
+	 
 
 
 	private void Comp1() {

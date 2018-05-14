@@ -27,7 +27,7 @@ public class ListenerJOUER extends JPanel implements ActionListener {
 	}
 	
  	public void actionPerformed(ActionEvent arg0) {
- 		new ModJeu() ;	
+ 		new ListenerJEU.Jeu() ;	
    
  	}
 }
